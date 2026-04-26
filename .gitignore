@@ -1,22 +1,94 @@
-# Build results
+# ==========================================
+# .NET 9 Hospital Management System (Clean)
+# ==========================================
+
+# ====== Build & Output Folders ======#
 bin/
 obj/
+Debug/
+Release/
+out/
 
-# Visual Studio / Rider / VS Code
-.vs/
+# ====== IDE / Editor Files ======#
 .vscode/
+.idea/
+.vs/
 
-# User-specific files
+# ====== User & Temporary Files ======#
 *.user
 *.suo
 *.userosscache
-*.sln.docstates
-
-# OS files
-.DS_Store
-
-# Logs
 *.log
+*.tmp
+*.cache
+*.db
+*.sqlite
+*.bak
 
-# Secrets
-appsettings.Development.json
+# ====== System Files ======#
+.DS_Store
+Thumbs.db
+
+# ====== Dotnet Auto Generated Files ======#
+**/obj/**/*.AssemblyInfo.cs
+**/obj/**/*.AssemblyInfoInputs.cache
+**/obj/**/*.csproj.FileListAbsolute.txt
+**/obj/**/*.sourcelink.json
+
+# ====== Publish / Angular / Node ======#
+publish/
+node_modules/
+wwwroot/lib/
+TestResults/
+dist/
+.angular/
+
+# ====== Docker / Env Files ======#
+.env
+.env.*
+docker-compose.override.yml
+*.pid
+
+# ==========================================
+# Allow Important Project Files (Tracked)
+# ==========================================
+
+# ====== Controllers ======#
+!**/Controllers/*.cs
+
+# ====== DTOs ======#
+!**/DTOs/**/*.cs
+
+# ====== Entities ======#
+!**/Entities/**/*.cs
+
+# ====== Mapping Profiles ======#
+!**/MappingProfiles/*.cs
+!**/MappingProfile/*.cs
+
+# ====== Business Layer ======#
+!CoreBussiness/Managers/*.cs
+!CoreBussiness/IManager/*.cs
+
+# ====== Data Layer ======#
+!CoreData/Repositories/*.cs
+!CoreData/IRepository/*.cs
+!CoreData/DbContexts/*.cs
+
+# ====== API Layer ======#
+!CoreMasterAPI/Controllers/*.cs
+!CoreMasterAPI/Extensions/*.cs
+
+# ====== Core Project Files ======#
+!**/*.csproj
+!**/Program.cs
+!**/appsettings*.json
+!**/launchSettings.json
+
+# ====== EF Core Migrations ======#
+!**/Migrations/*.cs
+!**/Migrations/*.Designer.cs
+!**/*ModelSnapshot.cs
+
+# ====== Solution File ======#
+!*.sln
