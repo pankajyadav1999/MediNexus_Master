@@ -13,10 +13,25 @@ builder.Services.AddAutoMapper(typeof(MappingProfile));
 // ===== RegisterService ===== //
 builder.Services.RegisterServices(builder.Configuration);
 
+
+// ===== CORS ===== //
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAngularApp", policy =>
+    {
+        policy
+            .AllowAnyOrigin()
+            .AllowAnyHeader()
+            .AllowAnyMethod();
+    });
+});
 // ===== Build App ===== //
 var app = builder.Build();
 
 app.UseHttpsRedirection();
+
+// ===== CORS ===== //
+app.UseCors("AllowAngularApp");
 
 app.UseAuthorization();
 
