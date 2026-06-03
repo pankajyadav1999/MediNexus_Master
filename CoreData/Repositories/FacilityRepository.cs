@@ -15,8 +15,8 @@ namespace CoreData.Repositories
 
         public void AddFacility(FacilityMaster facility)
         {
-            _context.FacilityMasters.Add(facility);
-            _context.SaveChanges();
+            this._context.FacilityMasters.Add(facility);
+            this._context.SaveChanges();
         }
     }
 }

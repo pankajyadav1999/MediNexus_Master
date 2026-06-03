@@ -7,5 +7,6 @@ namespace CoreModel.DTOs.Facility
         public string FacilityName { get; set; } = string.Empty;
         public string Description { get; set; } = string.Empty;
         public string EnteredBy { get; set; } = string.Empty;
+        public int? RoleId { get; set; }
     }
 }
